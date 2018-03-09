@@ -20,7 +20,6 @@ __CreateJSPath = function (js) {
     }
     return path;
 };
-console.log('issue-101');
 var bootPATH = __CreateJSPath("boot.js");
 document.write('<script src="' + bootPATH + 'jquery-2.1.4.js" type="text/javascript"></script>');
 document.write('<script src="' + bootPATH + 'common.js" type="text/javascript"></script>');
