@@ -1,0 +1,285 @@
+html,body{
+  height:100%;
+}
+@color-main: #fe8c8e;
+@color-white: #ffffff;
+.common-btn(){
+  width:100%;
+  height:40px;
+  line-height:40px;
+  border:none;
+  font-size:16px;
+  background-color: @color-main;
+  color: @color-white;
+  border-radius: 5px;
+  outline: none;
+  &:active{
+    opacity: 0.9;
+  }
+}
+.clearfix:after {
+  content: ".";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+.toolbar .picker-button{
+  color: @color-main;
+}
+.wrapper{
+  position: relative;
+  min-height:100%;
+  .topbar{
+    position: fixed;
+    width:100%;
+    height:45px;
+    line-height:45px;
+    text-align: center;
+    background-color: @color-main;
+    color: @color-white;
+    .title{
+      font-size:16px;
+      font-weight:normal;
+    }
+  }
+  &.index{
+    background: url("../images/index_bak.jpg") no-repeat;
+    background-size: 100% 100%;
+    .content{
+      padding:45px 0 0;
+      .use-card{
+        padding:50px 10% 0;
+        .form-item{
+          &:first-child{
+            margin-bottom:20px;
+            background-color: @color-white;
+            border-radius: 5px;
+            border: 1px solid @color-white;
+            input[type="tel"]{
+              width:100%;
+              height:40px;
+              padding:0 10px;
+              border:none;
+              box-sizing: border-box;
+              font-size:12px;
+              outline: none;
+            }
+          }
+          &:nth-child(2){
+            button{
+              .common-btn();
+            }
+          }
+        }
+      }
+    }
+  }
+  &.receive{
+    background-color: #f8f2f7;
+    .content{
+      padding:60px 14% 0;
+      @media screen and (max-width: 320px){
+        padding:50px 18% 0;
+      }
+      .banner{
+        padding:5px 5px 0;
+        background-color: @color-white;
+        border-radius: 5px;
+        img{
+          width:100%;
+        }
+      }
+      .gifts-box{
+        & > .title{
+          padding:5px 0;
+          font-size:14px;
+          font-weight:normal;
+        }
+        .gifts{
+          list-style: none;
+          &.type2{
+            margin:0 -15px;
+            & > li{
+              float: left;
+              width:50%;
+              padding:0 15px;
+              box-sizing: border-box;
+              text-align: center;
+              font-size:14px;
+              img{
+                width:100%;
+              }
+              .min-title{
+                height:44px;
+              }
+            }
+          }
+          &.type3{
+            margin:0 -3px;
+            & > li{
+              float: left;
+              width: 33.333%;
+              padding:0 3px;
+              box-sizing: border-box;
+              text-align: center;
+              font-size:14px;
+              img{
+                width:100%;
+              }
+              .title{
+                min-height:44px;
+              }
+            }
+          }
+          &.type5{
+            margin:0 -3px;
+            & > li{
+              float: left;
+              box-sizing: border-box;
+              text-align: center;
+              font-size:14px;
+              @media screen and (max-width: 320px){
+                font-size: 12px;
+              }
+              &:nth-child(1),
+              &:nth-child(2){
+                width: 50%;
+                padding:0 3px;
+              }
+              &:nth-child(3),
+              &:nth-child(4),
+              &:nth-child(5){
+                width: 33.333%;
+                padding:0 3px;
+              }
+              img{
+                width:100%;
+              }
+              .title{
+                min-height:44px;
+              }
+            }
+          }
+        }
+      }
+    }
+    .receive-btn{
+      position: absolute;
+      left:20%;
+      right:20%;
+      bottom:70px;
+      text-align: center;
+      @media screen and (max-width: 320px){
+        bottom:60px;
+      }
+      dt{
+        color: #999999;
+        p{
+          &:first-child{
+            margin-bottom:3px;
+            .iconfont{
+              display: inline-block;
+              width:60px;
+              height:60px;
+              line-height:60px;
+              font-size:25px;
+              background-color: #eeeeee;
+              border:1px solid #dfdede;
+              border-radius: 50%;
+              color: #bfbfbf;
+              @media screen and (max-width: 320px){
+                font-size: 20px;
+                width:45px;
+                height:45px;
+                line-height:45px;
+              }
+            }
+          }
+        }
+      }
+      dd{
+        font-size:14px;
+      }
+    }
+    .fill-btn{
+      position: absolute;
+      left:10%;
+      right:10%;
+      bottom:25px;
+      @media screen and (max-width: 320px){
+        bottom: 15px;
+      }
+      button{
+        .common-btn();
+        .iconfont{
+          font-size:18px;
+        }
+      }
+    }
+    #address_popup{
+      .weui-popup__modal{
+        background-color: #f8f2f7;
+        .topbar{
+          a{
+            position: absolute;
+            right:10px;
+            top:-2px;
+            color: @color-white;
+          }
+        }
+        .address-form{
+          padding:60px 10% 0;
+          list-style: none;
+          .form-item{
+            &:first-child,
+            &:nth-child(2),
+            &:nth-child(3),
+            &:nth-child(4){
+              margin-bottom:10px;
+              background-color: @color-white;
+              border-radius: 5px;
+              border: 1px solid @color-white;
+              input{
+                width:100%;
+                height:35px;
+                padding:0 10px;
+                border:none;
+                box-sizing: border-box;
+                outline: none;
+              }
+              textarea{
+                width:100%;
+                padding:10px;
+                border:none;
+                box-sizing: border-box;
+                outline: none;
+                &::-webkit-input-placeholder{
+                  font: 13.3333px Arial;
+                }
+              }
+            }
+            &:nth-child(3){
+              position: relative;
+              padding-right:20px;
+              .icon-fanhui{
+                position: absolute;
+                right:8px;
+                top:5px;
+              }
+            }
+            &:nth-child(4){
+              height:80px;
+              margin-bottom:20px;
+            }
+            &:nth-child(5){
+              button{
+                .common-btn();
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
