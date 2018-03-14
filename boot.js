@@ -23,3 +23,4 @@ __CreateJSPath = function (js) {
 var bootPATH = __CreateJSPath("boot.js");
 document.write('<script src="' + bootPATH + 'jquery-2.1.4.js" type="text/javascript"></script>');
 document.write('<script src="' + bootPATH + 'common.js" type="text/javascript"></script>');
+console.log('master');
